@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Light"; /*Can be any text*/
+  src: local("Poppins"),
+    url("../public/fonts/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular"; /*Can be any text*/
+  src: local("Poppins"),
+    url("../public/fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium"; /*Can be any text*/
+  src: local("Poppins"),
+    url("../public/fonts/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SemiBold"; /*Can be any text*/
+  src: local("Poppins"),
+    url("../public/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Medium", sans-serif;
+}
+.thin {
+  font-family: "Light", sans-serif;
+}
+
+#about,
+#trade,
+#team,
+#faq {
+  scroll-margin-top: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.description p {
+  font-family: "SemiBold", sans-serif;
+}
+.about p {
+  font-family: "Regular", sans-serif;
+}
