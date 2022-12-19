@@ -16,6 +16,9 @@ const Navbar = () => {
   const handleClick = (l) => {
     push("/", undefined, { locale: l });
   };
+  const closeMobileMenu = (e) => {
+    setIsMenu(!isMenu);
+  };
 
   const { t: translate } = useTranslation("navbar");
   return (
@@ -131,7 +134,7 @@ const Navbar = () => {
                 isMenu && "shadow-lg shadow-black/30"
               }  `}
             >
-              <MenuDropDown />
+              <MenuDropDown closeMobileMenu={closeMobileMenu} />
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
-const MenuDropDown = () => {
+const MenuDropDown = ({ closeMobileMenu }) => {
   const { t: translate } = useTranslation("dropdown");
   return (
     <div className=" mb-12">
@@ -10,12 +10,14 @@ const MenuDropDown = () => {
         <a
           className="hover:text-white duration-[150ms] ease-out bg-white hover:bg-[#55595c] text-center text-[18px] w-[80%] py-2 rounded-full  "
           href="#about"
+          onClick={() => closeMobileMenu()}
         >
           <li>{translate("a1")}</li>
         </a>
         <a
           className="hover:text-white duration-[150ms] ease-out bg-white hover:bg-[#55595c] text-center text-[18px] w-[80%] py-2 rounded-full  "
           href="#trade"
+          onClick={() => closeMobileMenu()}
         >
           <li>{translate("a2")}</li>
         </a>
@@ -23,6 +25,7 @@ const MenuDropDown = () => {
         <a
           className="hover:text-white duration-[150ms] ease-out bg-white hover:bg-[#55595c] text-center text-[18px] w-[80%] py-2 rounded-full  "
           href="#team"
+          onClick={() => closeMobileMenu()}
         >
           <li>{translate("a3")}</li>
         </a>
@@ -30,12 +33,14 @@ const MenuDropDown = () => {
         <a
           className="hover:text-white duration-[150ms] ease-out bg-white hover:bg-[#55595c] text-center text-[18px] w-[80%] py-2 rounded-full  "
           href="#faq"
+          onClick={() => closeMobileMenu()}
         >
           <li>{translate("a4")}</li>
         </a>
         <a
           className="hover:text-white duration-[150ms] ease-out bg-white hover:bg-[#55595c] text-center text-[18px] w-[80%] py-2 rounded-full  "
           href="#contact"
+          onClick={() => closeMobileMenu()}
         >
           <li>{translate("a5")}</li>
         </a>
@@ -43,6 +48,7 @@ const MenuDropDown = () => {
         <Link
           href="/login"
           className="hover:text-white duration-[150ms] ease-out bg-white hover:bg-[#55595c] text-center text-[18px] w-[80%] py-2 rounded-full  "
+          onClick={() => closeMobileMenu()}
         >
           <li>{translate("a6")}</li>
         </Link>
